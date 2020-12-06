@@ -1,13 +1,27 @@
 <template>
   <div id="app">
-    <button>Оставить отзыв</button>
+    <button class="main-button" v-on:click="showForm">Оставить отзыв</button>
+    <feedback v-if="isFeebackVisible" />
   </div>
 </template>
 
 <script>
+import feedback from "@/components/feedback";
 export default {
   name: "App",
-  components: {},
+  components: {
+    feedback,
+  },
+  data() {
+    return {
+      isFeebackVisible: false,
+    };
+  },
+  methods: {
+    showForm() {
+      this.isFeebackVisible = true;
+    },
+  },
 };
 </script>
 
@@ -18,6 +32,22 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+}
+.main-button {
+  position: relative;
+  background-color: #5ac2c9;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
 }
 </style>
