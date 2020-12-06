@@ -1,0 +1,28 @@
+.feedback-rating {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 140px;
+  max-width: 400px;
+  margin-bottom: 32px;
+  &__item {
+    margin-right: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 175px;
+  }
+  &__indicator {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  &__stars {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

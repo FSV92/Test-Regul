@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <button class="main-button" v-on:click="showForm">Оставить отзыв</button>
-    <feedback v-if="isFeebackVisible" v-on:close-form="closeForm" />
+    <Feedback v-if="isFeebackVisible" v-on:close-form="closeForm" />
   </div>
 </template>
 
 <script>
-import feedback from "@/components/feedback";
+import Feedback from "@/components/feedback";
 export default {
   name: "App",
   components: {
-    feedback,
+    Feedback,
   },
   data() {
     return {
@@ -36,6 +36,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   height: 100vh;
+  background-color: #ebedf0;
 }
 .main-button {
   position: relative;

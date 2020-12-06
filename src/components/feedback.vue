@@ -19,15 +19,17 @@
         <h2 class="feedback-author__title">Фоточки в свадебном платьице</h2>
         <span class="feedback-author__name">Алена Смирнова</span>
       </div>
+      <Rating />
     </div>
     <button class="feedback__button">Отправить</button>
   </div>
 </template>
 
 <script>
+import Rating from "@/components/rating";
 export default {
   name: "feedback",
-  components: {},
+  components: { Rating },
   methods: {
     closeForm() {
       this.$emit("close-form");
