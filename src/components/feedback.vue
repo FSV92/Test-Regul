@@ -9,6 +9,7 @@
         v-on:click="closeForm"
       />
     </div>
+
     <div class="feedback__content">
       <div class="feedback__author feedback-author">
         <img
@@ -20,6 +21,7 @@
         <span class="feedback-author__name">Алена Смирнова</span>
       </div>
       <Rating />
+      <Comment />
     </div>
     <button class="feedback__button">Отправить</button>
   </div>
@@ -27,9 +29,10 @@
 
 <script>
 import Rating from "@/components/rating";
+import Comment from "@/components/comment";
 export default {
   name: "feedback",
-  components: { Rating },
+  components: { Rating, Comment },
   methods: {
     closeForm() {
       this.$emit("close-form");

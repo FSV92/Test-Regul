@@ -22,13 +22,17 @@
     color: #3c3c3c;
   }
   &__close {
-    width: 24px;
-    height: 24px;
+    width: 13px;
+    height: 13px;
   }
   &__content {
     padding: 24px 32px;
   }
+  &__comment {
+    margin-bottom: 16px;
+  }
 }
+
 .feedback-author {
   display: flex;
   flex-direction: column;
