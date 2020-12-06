@@ -9,7 +9,17 @@
         v-on:click="closeForm"
       />
     </div>
-    <div class="feedback__content">Контент</div>
+    <div class="feedback__content">
+      <div class="feedback__author feedback-author">
+        <img
+          class="feedback-author__img"
+          src="../img/author.jpg"
+          alt="author"
+        />
+        <h2 class="feedback-author__title">Фоточки в свадебном платьице</h2>
+        <span class="feedback-author__name">Алена Смирнова</span>
+      </div>
+    </div>
     <button class="feedback__button">Отправить</button>
   </div>
 </template>
@@ -26,5 +36,5 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" src="./scss/feedback.scss">
 </style>

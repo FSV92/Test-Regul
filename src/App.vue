@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-      isFeebackVisible: false,
+      isFeebackVisible: true,
     };
   },
   methods: {
@@ -30,7 +30,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -52,5 +52,6 @@ export default {
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
+  z-index: -1;
 }
 </style>
