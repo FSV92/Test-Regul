@@ -22,6 +22,7 @@
       </div>
       <Rating />
       <Comment />
+      <Photos />
     </div>
     <button class="feedback__button">Отправить</button>
   </div>
@@ -30,9 +31,10 @@
 <script>
 import Rating from "@/components/rating";
 import Comment from "@/components/comment";
+import Photos from "@/components/photos";
 export default {
   name: "feedback",
-  components: { Rating, Comment },
+  components: { Rating, Comment, Photos },
   methods: {
     closeForm() {
       this.$emit("close-form");
