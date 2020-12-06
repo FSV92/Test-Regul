@@ -2,15 +2,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 140px;
+  max-height: 165px;
   max-width: 400px;
-  margin-bottom: 32px;
   &__item {
-    margin-right: 52px;
+    margin: 0 45px 27px 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20px;
     width: 175px;
   }
   &__indicator {
@@ -18,11 +16,21 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
   &__stars {
-    width: 100%;
+    width: 162px;
     display: flex;
     justify-content: space-between;
+    padding: 0 0 0 5px;
+  }
+  &__star {
+    width: 21px;
+    height: 21px;
+    fill: #eaecf0;
+    cursor: pointer;
+    &:hover {
+      fill: #53c6d1;
+    }
   }
 }

@@ -17,14 +17,19 @@
           src="../img/author.jpg"
           alt="author"
         />
-        <h2 class="feedback-author__title">Фоточки в свадебном платьице</h2>
-        <span class="feedback-author__name">Алена Смирнова</span>
+        <div class="feedback-author__text">
+          <h2 class="feedback-author__title">Фоточки в свадебном платьице</h2>
+          <span class="feedback-author__name">Алена Смирнова</span>
+        </div>
       </div>
       <Rating />
       <Comment />
       <Photos />
     </div>
-    <button class="feedback__button">Отправить</button>
+
+    <div class="feedback__footer">
+      <button class="feedback__send">Отправить</button>
+    </div>
   </div>
 </template>
 
