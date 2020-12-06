@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <button class="main-button" v-on:click="showForm">Оставить отзыв</button>
-    <feedback v-if="isFeebackVisible" />
+    <feedback v-if="isFeebackVisible" v-on:close-form="closeForm" />
   </div>
 </template>
 
@@ -20,6 +20,9 @@ export default {
   methods: {
     showForm() {
       this.isFeebackVisible = true;
+    },
+    closeForm() {
+      this.isFeebackVisible = false;
     },
   },
 };
