@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <button class="main-button" v-on:click="showForm">Оставить отзыв</button>
+    <button class="main-button" v-on:click="showForm" v-if="!isFeebackVisible">
+      Оставить отзыв
+    </button>
     <Feedback v-if="isFeebackVisible" v-on:close-form="closeForm" />
   </div>
 </template>

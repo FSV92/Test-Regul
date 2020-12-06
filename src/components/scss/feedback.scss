@@ -24,6 +24,9 @@
   &__close {
     width: 13px;
     height: 13px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__content {
     padding: 23px 32px 24px 32px;
@@ -77,6 +80,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #3c3c3c;
+    text-align: left;
   }
   &__name {
     font-style: normal;
@@ -84,5 +88,28 @@
     font-size: 12px;
     line-height: 16px;
     color: #50586a;
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback {
+    &__header {
+      padding: 16px 22px 15px 16px;
+    }
+    &__content {
+      padding: 14px 16px 24px 16px;
+    }
+    &__rating {
+      margin-bottom: 5px;
+    }
+  }
+  .feedback-author {
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    &__img {
+      margin-bottom: 13px;
+      width: 84px;
+      height: 56px;
+    }
   }
 }

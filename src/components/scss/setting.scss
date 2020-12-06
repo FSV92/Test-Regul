@@ -1,6 +1,9 @@
+@import "normalize";
+
 * {
   box-sizing: border-box;
 }
+
 #app {
   font-family: "Montserrat", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,5 +28,4 @@
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
-  z-index: -1;
 }

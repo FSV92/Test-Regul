@@ -1,9 +1,8 @@
 .feedback-rating {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  max-height: 165px;
-  max-width: 400px;
+  min-height: 165px;
+  max-width: 440px;
   &__item {
     margin: 0 45px 27px 0;
     display: flex;
@@ -31,6 +30,20 @@
     cursor: pointer;
     &:hover {
       fill: #53c6d1;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback-rating {
+    &__item {
+      margin-bottom: 23px;
+    }
+    &__indicator {
+      margin-bottom: 13px;
+    }
+    &__stars {
+      width: 170px;
     }
   }
 }

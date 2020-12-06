@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="feedback-rating__item">
-      <span class="feedback-rating__indicator">Качество</span>
+      <span class="feedback-rating__indicator">Скорость отдачи видео</span>
       <div class="feedback-rating__stars">
         <svg class="feedback-rating__star">
           <use xlink:href="#star"></use>
@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="feedback-rating__item">
-      <span class="feedback-rating__indicator">Скорость отдачи видео</span>
+      <span class="feedback-rating__indicator">Качество</span>
       <div class="feedback-rating__stars">
         <svg class="feedback-rating__star">
           <use xlink:href="#star"></use>

@@ -35,3 +35,12 @@
     color: #7f899e;
   }
 }
+
+@media (max-width: 576px) {
+  .feedback-comment {
+    &__field {
+      padding: 16px 12px;
+      height: 146px;
+    }
+  }
+}

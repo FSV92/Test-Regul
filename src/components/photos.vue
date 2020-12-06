@@ -51,6 +51,18 @@
         alt="basket"
       />
     </div>
+    <div class="feedback-photos__wrap-img">
+      <img
+        class="feedback-photos__img"
+        src="../img/photo-5.jpg"
+        alt="photo-5"
+      />
+      <img
+        class="feedback-photos__delete"
+        src="../img/delete.svg"
+        alt="basket"
+      />
+    </div>
   </div>
 </template>
 
