@@ -1,15 +1,26 @@
 .feedback-photos {
   display: flex;
-  overflow: hidden;
-  &__button {
+  flex-wrap: wrap;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__input {
+    display: none;
+  }
+  &__label {
+    background-image: url("../../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 33px;
-    max-width: 80px;
-    max-height: 80px;
+    width: 80px;
+    height: 80px;
     background-color: #f3f4f6;
     border: 1px solid #eaecf0;
     border-radius: 6px;
     margin-right: 8px;
     cursor: pointer;
+    flex-shrink: 0;
   }
   &__wrap-img {
     position: relative;
@@ -17,6 +28,7 @@
     height: 80px;
     border-radius: 6px;
     margin-right: 8px;
+    margin-bottom: 8px;
     overflow: hidden;
     flex-shrink: 0;
   }
@@ -37,11 +49,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .feedback-photos {
-    flex-wrap: wrap;
-    &__wrap-img {
-      margin-bottom: 8px;
-    }
-  }
+.template {
+  display: none;
 }

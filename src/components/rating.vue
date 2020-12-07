@@ -15,80 +15,80 @@
 
     <div class="feedback-rating__item">
       <span class="feedback-rating__indicator">Скорость </span>
-      <div class="feedback-rating__stars">
-        <svg class="feedback-rating__star">
+      <div class="feedback-rating__stars" v-on:click="setRating">
+        <svg id="1" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="2" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="3" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="4" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="5" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
       </div>
     </div>
     <div class="feedback-rating__item">
       <span class="feedback-rating__indicator">Скорость отдачи видео</span>
-      <div class="feedback-rating__stars">
-        <svg class="feedback-rating__star">
+      <div class="feedback-rating__stars" v-on:click="setRating">
+        <svg id="1" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="2" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="3" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="4" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="5" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
       </div>
     </div>
     <div class="feedback-rating__item">
       <span class="feedback-rating__indicator">Качество</span>
-      <div class="feedback-rating__stars">
-        <svg class="feedback-rating__star">
+      <div class="feedback-rating__stars" v-on:click="setRating">
+        <svg id="1" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="2" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="3" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="4" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="5" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
       </div>
     </div>
     <div class="feedback-rating__item">
       <span class="feedback-rating__indicator">Пунктуальность</span>
-      <div class="feedback-rating__stars">
-        <svg class="feedback-rating__star">
+      <div class="feedback-rating__stars" v-on:click="setRating">
+        <svg id="1" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="2" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="3" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="4" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
-        <svg class="feedback-rating__star">
+        <svg id="5" class="feedback-rating__star">
           <use xlink:href="#star"></use>
         </svg>
       </div>
@@ -99,6 +99,19 @@
 <script>
 export default {
   name: "rating",
+  methods: {
+    setRating(e) {
+      let stars = e.target.parentElement.parentElement.querySelectorAll(
+        `.feedback-rating__star`
+      );
+      for (let i = 0; i < e.target.parentElement.id; i++) {
+        stars[i].classList.add(`feedback-rating__star--active`);
+        for (let j = e.target.parentElement.id; j < stars.length; j++) {
+          stars[j].classList.remove(`feedback-rating__star--active`);
+        }
+      }
+    },
+  },
 };
 </script>
 
