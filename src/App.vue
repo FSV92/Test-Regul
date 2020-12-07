@@ -1,9 +1,23 @@
 <template>
   <div id="app">
-    <button class="main-button" v-on:click="showForm" v-if="!isFeebackVisible">
+    <button class="main-button" v-on:click="showForm" v-if="!isFeedbackVisible">
       Оставить отзыв
     </button>
-    <Feedback v-if="isFeebackVisible" v-on:close-form="closeForm" />
+    <Feedback
+      v-if="isFeedbackVisible"
+      v-on:close-form="closeFormHadler"
+      v-on:submit-form="submitFormhadler"
+    />
+
+    <div class="alert" v-if="isAlertVisible">
+      <span class="alert__text">Спасибо, отзыв опубликован!</span>
+      <img
+        class="alert__close"
+        src="./img/close-alert.svg"
+        alt="close-alert"
+        v-on:click="closeAlert"
+      />
+    </div>
   </div>
 </template>
 
@@ -16,15 +30,23 @@ export default {
   },
   data() {
     return {
-      isFeebackVisible: true,
+      isFeedbackVisible: false,
+      isAlertVisible: false,
     };
   },
   methods: {
     showForm() {
-      this.isFeebackVisible = true;
+      this.isFeedbackVisible = true;
     },
-    closeForm() {
-      this.isFeebackVisible = false;
+    closeFormHadler() {
+      this.isFeedbackVisible = false;
+    },
+    submitFormhadler() {
+      this.isFeedbackVisible = false;
+      this.isAlertVisible = true;
+    },
+    closeAlert() {
+      this.isAlertVisible = false;
     },
   },
 };
