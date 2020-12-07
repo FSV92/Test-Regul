@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Feedback from "@/components/feedback";
+import Feedback from "./components/feedback";
 export default {
   name: "App",
   components: {
@@ -52,5 +52,5 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./components/scss/setting.scss">
+<style lang="scss" src="./scss/setting.scss">
 </style>

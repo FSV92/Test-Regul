@@ -1,10 +1,9 @@
 .feedback-rating {
   display: flex;
   flex-wrap: wrap;
-  min-height: 165px;
   max-width: 440px;
   &__item {
-    margin: 0 45px 27px 0;
+    margin: 0 45px 30px 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -14,8 +13,8 @@
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 12px;
+    line-height: 14px;
+    margin-bottom: 15px;
   }
   &__stars {
     width: 162px;
@@ -43,7 +42,7 @@
 @media (max-width: 576px) {
   .feedback-rating {
     &__item {
-      margin-bottom: 23px;
+      margin-bottom: 28px;
     }
     &__indicator {
       margin-bottom: 13px;

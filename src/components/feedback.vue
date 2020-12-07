@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import Rating from "@/components/rating";
-import Comment from "@/components/comment";
-import Photos from "@/components/photos";
+import Rating from "./rating";
+import Comment from "./comment";
+import Photos from "./photos";
 export default {
   name: "feedback",
   components: { Rating, Comment, Photos },
@@ -51,5 +51,5 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./scss/feedback.scss">
+<style lang="scss" src="../scss/feedback.scss">
 </style>

@@ -6,10 +6,10 @@
       placeholder="Комментарий"
       maxlength="500"
       required
-      v-model="texttt"
+      v-model="text"
     ></textarea>
     <div class="feedback-comment__count">
-      <span>{{ texttt.length }}</span
+      <span>{{ text.length }}</span
       >/<span>500</span>
     </div>
   </div>
@@ -20,10 +20,10 @@ export default {
   name: "comment",
   data() {
     return {
-      texttt: "",
+      text: "",
     };
   },
 };
 </script>
 
-<style lang="scss" src="./scss/comment.scss"></style>
+<style lang="scss" src="../scss/comment.scss"></style>
